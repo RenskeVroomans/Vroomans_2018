@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-03-10T16:28:39+01:00
+
+====== int SegmentToColor(int type, int max); ======
+Created Tuesday 10 March 2015
+
+To make space-time plots where only the concentration of the segmentation gene is depicted: returns a value between 0 and 255 depending on the concentration of the given gene.
+I only use it in the analysis program I think.

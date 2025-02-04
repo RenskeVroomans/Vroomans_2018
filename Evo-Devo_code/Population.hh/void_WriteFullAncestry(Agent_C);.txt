@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T18:10:31+01:00
+
+====== void WriteFullAncestry(Agent C); ======
+Created Friday 31 January 2014
+
+Only for a rerun apparently
+
+* if you find agent C within popancestry:
+	* write the agent's info to a file, but only stuff like id, birth time, bands etc, nothing about ancestry...
+	* call function WriteGenome("") of agent C

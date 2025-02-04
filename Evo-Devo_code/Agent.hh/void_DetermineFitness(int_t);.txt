@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-28T16:11:38+01:00
+
+====== void DetermineFitness(int t); ======
+Created Tuesday 28 January 2014
+
+Function that determines the value of fitness.
+
+boundaries[]: probably stores for every boundary, the position of that boundary.
+
+* first check in genome function [[Evo-Devo Code:Genome.hh:int CheckViability()|CheckViability()]] whether the fitness should be determined at all: are all gene types present?
+* initialization of a whole bunch of things
+
+loop through all cells but the last four: then you cannot check as far ahead with J.
+	for every cell i, look up to 5 cells (j) ahead
+		if cell i is high and cell j is low (or vice versa)
+			* save the boundary position (j) if the switching is next to you.
+			* else: look one pos away from cell i. if the switch is still true, , then move i one up, untill you are next to j or as close to j as makes a significant difference (boundary is fuzzy).
+			* then save boundary pos (while keeping in mind that boundary can be fuzzy)
+
+* then from nr of boundaries, determine nr of bands
+* decide which bands are broad enough to count:
+loop through all bands	
+	store in **bands: begin, end, length, sufficient width?
+	
+
+* penalty for many 'last-minute' changes
+* penalty for large nr of genes and large nr of TFBS
+* penalty for having too short segments (total-adequate segments)
+* nonexpfitness: max (0.001, nrlongbands-penalties)
+
+fitness=exp(c*nonexpfitness)-1
+

@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+
+
+====== void UpdateNetworkState(int steps, double proteinstates[NrGeneTypes],  double signalstates[NrSignGeneTypes] ) ======
+Created Monday 27 January 2014
+
+for the number of steps given,
+
+- set transcr[genetype] op 0
+- begin at the beginning of the vertex and edge lists.
+- go through all vertices
+		-check if maternal gene -> don't change
+		- else: go through edge list belonging to each vertex
+			look up the type of the gene belonging to edge
+				if maternal: proteinstate=power(proteinstate of maternal gene, N)
+				else if signaling gene:  proteinstate=power(signalstate, N)
+				else (normal TF):  proteinstate=power(proteinstate, N)
+				Hstate=power(H,N)
+
+'''
+	   if(TFBS is activating)	
+		transcract=proteinstate/(Hstate+proteinstate); //hill functie
+		check voor groter dan maxact --> pas maxact aan
+	   if(repressor)
+		repr*=Hstate/(Hstate+proteinstate)
+     //end going through list of edges for this vertex
+     enhancer=maxact*repr*Emax; //calculate total transcription 
+     genetype=(*iv)->Gen->type;
+     transcr[genetype]+=enhancer; //all genes of this type get this enhancement--> because leads to one protein level.
+go to next vertex and list of edges.
+'''
+
+
+- update gene states: go through all types
+	- do nothing if maternal
+	- else:  proteinstates[i]+=HT*(transcr[i]-Decay*proteinstates[i]);

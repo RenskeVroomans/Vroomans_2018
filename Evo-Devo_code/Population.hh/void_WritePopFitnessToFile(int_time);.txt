@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T15:51:09+01:00
+
+====== void WritePopFitnessToFile(int time); ======
+Created Friday 31 January 2014
+
+Go through agents to  calculate mean fitness and std dev, min and max fitness at that time point
+ 
+fprintf(f,"%i\t%i\t%f\t%f\t%f\t%f\n",time,nrag,meanfit,minfit,maxfit,stdfit);

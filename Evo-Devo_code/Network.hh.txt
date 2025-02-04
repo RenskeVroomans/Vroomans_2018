@@ -1,0 +1,32 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== Network.hh ======
+Created Wednesday 02 October 2013
+
+includes:
+Header.hh
+Genome.hh
+ChromBB.hh
+Gene.hh
+TFBS.hh
+Vertex.hh
+Edge.hh
+Misc.hh
+
+defines the class Network, with the following variables and functions:
+public:
+  list<Vertex *> *VL;
+  typedef std::list<Vertex *>::iterator iterv;
+  list<list <Edge *> > *AL;
+  typedef list<list <Edge *> >::iterator iterel;
+  typedef list<Edge *>::iterator itere;
+  typedef std::list<int>::iterator iternsf;
+  typedef std::list<int>::reverse_iterator iternsb;
+
+
+	Network();
+	~Network();
+	[[+void BuildNetwork(Genome G)|void BuildNetwork(Genome *G);]]
+	[[:Evo-Devo code:Network.hh:void UpdateNetworkState(int steps double proteinstates NrGeneTypes  double signalstates NrSignGeneTypes )|void UpdateNetworkState(int steps,double proteinstates[NrGeneTypes],double signalstates[NrSignGeneTypes]);]]	
+

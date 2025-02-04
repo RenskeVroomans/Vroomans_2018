@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T18:07:41+01:00
+
+====== void ReadAncestorsFromFile(char fname); ======
+Created Friday 31 January 2014
+
+push all integers in the file into popancestry list. No idea what you'd do with that though.

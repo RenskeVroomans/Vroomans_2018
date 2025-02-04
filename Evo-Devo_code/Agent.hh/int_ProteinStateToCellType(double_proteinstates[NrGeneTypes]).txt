@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-28T18:00:19+01:00
+
+====== int ProteinStateToCellType(double proteinstates[NrGeneTypes]) ======
+Created Tuesday 28 January 2014
+
+Goes through all proteins of 1 cell (given as parameter) to translate whole array to a single integer representing cell type
+
+ int i;
+  int type;
+
+  type=0;
+  for(i=0;i<NrGeneTypes;i++)
+    {
+      if(proteinstates[i]<ThOff)
+	type+=0;
+      else if(proteinstates[i]<ThOn)
+	type+=__gnu_cxx::power(3,i);
+      else
+	type+=2*__gnu_cxx::power(3,i);
+    }
+  return type;

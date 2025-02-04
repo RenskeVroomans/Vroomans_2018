@@ -1,0 +1,16 @@
+====== Vertex.hh ======
+Created Wednesday 02 October 2013
+
+include:
+Gene.hh
+
+defines class Vertex
+
+ public:
+  Gene *Gen;
+  int label;
+
+  Vertex();
+  ~Vertex();
+  Vertex(Gene *G,int l);
+  Vertex(const Vertex &v);

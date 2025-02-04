@@ -1,0 +1,17 @@
+====== void CreateAgentFromParent(Agent  A int agid int t) ======
+Created Friday 17 January 2014
+
+
+**The difference between this function and the CloneAgent function is the mutation step**
+
+  InitAgent(agid,A->agentid,t);
+  G->CloneGenome(A->G);
+  G->MutateGenome(t);
+  N->BuildNetwork(G);
+  //wfspeed=1.+(uniform()*0.3-0.15);//if you want to add developmental noise
+  DevelopAgent();
+  DetermineFitness(t);
+#ifdef RUN
+  ancestry=A->ancestry;//copy ancestry of parent as to be your ancestry
+  ancestry.push_back(A->agentid);//add your parent to your ancestry
+#endif

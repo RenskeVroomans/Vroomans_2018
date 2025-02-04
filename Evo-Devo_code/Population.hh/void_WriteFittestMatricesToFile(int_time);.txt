@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T16:12:49+01:00
+
+====== void WriteFittestMatricesToFile(int time); ======
+Created Friday 31 January 2014
+
+* look for fittest agent in the field.
+* store all agents with at least 95% of that fitness level, in selectedags
+* Make a directory for the data
+* write every agent to a file calling WriteAgentToFile(dirname, I,J)
+

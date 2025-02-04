@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== void CellCellSignalling(int t) ======
+Created Friday 17 January 2014
+
+More complicated function.
+
+if GRADIENT is defined, create a static Gaussian gradient depending on the timestep and position of the cell.
+//Modification: this section now allows dynamic production and decay in the growth zone. No explicit diffusion, just a decay gradient.//
+
+if WAVEFRONT is defined, displace the location of the wavefront every timestep (similar to what I did before)
+
+**evolvable signalling**
+
+update the array signalstates from the protein states of neighbouring cells
+
+half of genes takes (sum of) input from direct neighbours, not from self --> notch-delta like
+	* empty the the signalstates array for these genes
+	* for every cell, check the states of the neighbours and add them to your position in signalstates[]
+
+other half is diffusion-based cell signalling. has attached note that may require higher diffusion coefficient and smaller timesteps to get it to work.
+	* empty the the signalstates array for these genes

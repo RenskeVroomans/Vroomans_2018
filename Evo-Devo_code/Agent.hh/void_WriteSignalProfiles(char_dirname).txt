@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-29T11:46:39+01:00
+
+====== void WriteSignalProfiles(char dirname) ======
+Created Wednesday 29 January 2014
+
+Bit of a funny long function, writing data from the E 3d array to a file;
+
+* selecting only certain time steps (k), looping through cells and protein types. → SignalProfiles
+* selecting only certain cells (j), looping through time and protein types. → temporaldynamics
+
+
+At the end, I added a loop to print data from cellpattern[][][], which contains cell-based data on the gene expression
+(see also [[Evo-Devo code:Agent.hh:void StoreCellStates(int I);|StoreCellStates(int I);]] )

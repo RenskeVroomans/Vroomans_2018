@@ -1,0 +1,57 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== Evo-Devo code ======
+Created Wednesday 02 October 2013
+
+Kirsten heeft me haar code gegeven voor de evolutie van segmentatie
+Dit is de documentatie van de schone versie voor Sofia
+
+[[Evo-Devo code:Kirsten's model setup|Kirsten's model setup]]
+
+[[Evo-Devo code:Code layout|Code layout]]
+
+[[Evo-Devo code:Analysis program|Analysis program]]
+
+**header files:**
+[[Evo-Devo code:Header.hh|Header.hh]] 
+
+[[Evo-Devo code:Cell.hh|Cell.hh]] 
+
+[[Evo-Devo code:Network.hh|Network.hh]] 
+
+[[Evo-Devo code:Gene.hh|Gene.hh]] 
+
+[[Evo-Devo code:Genome.hh|Genome.hh]] 
+
+[[Evo-Devo code:Population.hh|Population.hh]] 
+
+[[Evo-Devo code:Edge.hh|Edge.hh]] 
+
+[[Evo-Devo code:Vertex.hh|Vertex.hh]] 
+
+[[Evo-Devo code:Agent.hh|Agent.hh]] 
+
+[[Evo-Devo code:ChromBB.hh|ChromBB.hh]] 
+
+[[Evo-Devo code:TFBS.hh|TFBS.hh]] 
+
+[[Evo-Devo code:Misc.hh|Misc.hh]] 
+
+**.cc files without header:**
+Vars.cc: stores global variables and their default value
+IO.cc: contains function which reads parameter values from a file.
+
+dSFMT.h  //random number libs
+
+**output: in directory given as a parameter**
+* PopBandDynamics, outputted from [[:Evo-Devo code:Population.hh:void WriteBandsToFile(int time);|Population.hh-WriteBandsToFile(int time)]]
+* PopFitnessDynamics, outputted from [[:Evo-Devo code:Population.hh:void WritePopFitnessToFile(int time);|Population.hh-WritePopFitnessToFile(int time)]]
+* PopGenomeLengthDynamics, outputted from [[:Evo-Devo code:Population.hh:void WriteGenomeLengthToFile(int time);|Population.hh-WriteGenomeLengthToFile(int time)]]
+* A directory with printed out:
+	* CodedGenomeAgent# ([[:Evo-Devo code:Agent.hh:void WriteGenome(char dirname)|Agent.hh-void WriteGenome(char dirname)]])
+	* FitnessDetails# ([[:Evo-Devo code:Agent.hh:void WriteFitnessDetails(char dirname)|Agent.hh-void WriteFitnessDetails(char dirname)]])
+	* Signalprofiles at different time  points ([[:Evo-Devo code:Agent.hh:void WriteSignalProfiles(char dirname)|Agent.hh-void WriteSignalProfiles(char dirname)]])
+	* Temporal dynamics at different cells (see above function)
+	* A picture with the cell types  in the growing tissue over time ([[:Evo-Devo code:Agent.hh:void WriteEmbryology(char dirname)|Agent.hh-void WriteEmbryology(char dirname)]])
+

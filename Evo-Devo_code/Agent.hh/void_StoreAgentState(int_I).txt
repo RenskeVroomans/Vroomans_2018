@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== void StoreAgentState(int I) ======
+Created Friday 17 January 2014
+
+
+**Stores all protein states in 3D array E [step][cell][protein]**
+**and stores each cell's cell type in a 2D array types[step][cell]**
+**Note that, because we now have cell divisions, each subsequent time point stores the concentrations of a cell with a different ID**
+see also [[Evo-Devo code:Agent.hh:void StoreCellStates(int I);|StoreCellStates();]]
+
+Calls [[Evo-Devo code:Agent.hh:int ProteinStateToCellType(double proteinstates[NrGeneTypes])|ProteinStateToCellType(double proteinstates[NrGeneTypes]);]]
+
+if(I>=NrStorages)
+    {
+      printf("storage array not large enough\n");
+      exit(1);
+    }
+
+'''
+	for(j=0;j<anrcells_;j++)
+	  for(k=0;k<NrGeneTypes;k++)
+	    E[I][j][k]=(int)CL[j]->proteinstates[k]; 
+'''
+
+'''
+	for(j=0;j<anrcells_;j++)
+	  types[I][j]=ProteinStateToCellType(CL[j]->proteinstates);
+'''

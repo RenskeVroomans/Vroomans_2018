@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== void CreateAgentFromGenome(int agid int t char  fname) ======
+Created Friday 17 January 2014
+
+**same as CreateAgentFromScratch, but then with a genome read from a file**
+
+ InitAgent(agid,0,t);
+  G->CreateGenomeFromFile(fname);
+  N->BuildNetwork(G);
+  //wfspeed=1.+(uniform()*0.3-0.15);//if you want to add developmental noise
+  DevelopAgent();
+  DetermineFitness(t);
+#ifdef RUN
+  ancestry.push_back(-1);//beginning of ancestry, no parent
+#endif

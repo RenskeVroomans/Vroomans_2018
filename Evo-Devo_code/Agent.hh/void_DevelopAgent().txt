@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== void DevelopAgent() ======
+Created Friday 17 January 2014
+
+
+**development of the agent: all timesteps**
+
+note: Storageint is the update period of the data output
+
+	FormZygote();
+	
+	for(i=0;i<=NrDevSteps;i++)
+	  {
+              **//if applicable: signalling between cells. Also takes care of morphogen decay.**
+	    [[Evo-Devo code:Agent.hh:void CellCellSignalling(int t)|CellCellSignalling(i);]]
+   
+	    //**network update**
+	    [[Evo-Devo code:Agent.hh:void IntracellularDynamics()|IntracellularDynamics();]]
+	 
+	    **//division**
+	    if (divinterval && !(i%divinterval) &&i<divtime)  //if you should divide (divinterval>0), and it's the right moment before the end of the division period
+			[[Evo-Devo code:Agent.hh:void DivideGrowthZone();|DivideGrowthzone();]]
+
+	   **//store data of gene expression**
+	    if(i%StorageInt==0)
+	   {
+		[[Evo-Devo code:Agent.hh:void StoreAgentState(int I)|StoreAgentState((int)(i/StorageInt));]] //stores data per position (Kirsten)
+		if(storecellspec)
+			S[[Evo-Devo code:Agent.hh:void StoreCellStates(int I);|toreCellStates((int)(i/StorageInt));]]//we work with a list and division, so cells move. this stores data per cell
+	    }
+	
+	    /**/Step 4: at the final so many time steps, store the gene expression of every cell. This is used to check the stability of the pattern**
+	    [[Evo-Devo code:Agent.hh:void MaintenanceIntracellularDynamics(int i)|MaintenanceIntracellularDynamics(i);]]
+	
+	UpdateCellAges();//mainly for debugging purposes

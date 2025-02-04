@@ -1,0 +1,55 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== Population.hh ======
+Created Wednesday 02 October 2013
+
+Includes:
+Agent.hh
+Cell.hh
+Network.hh
+Genome.hh
+Gene.hh
+TFBS.hh
+Header.hh
+Misc.hh
+<cstdio>
+<stdlib.h> 
+
+defines the class Population
+
+public:
+  Agent* Ags[NI][NJ]; → //Field with agents//
+  Agent* Ags2[NI][NJ]; → // What is this one for? Used in Margolus, shuffle and Step → temporary storage//
+  int pnrags_;
+  //int maxnrlonganddifbands;
+  double childbins_bands[MaxNrBands+1];
+  double childbins_longbands[MaxNrBands+1];
+  double childbins_difbands[MaxNrBands+1];
+  double childbins_nonexpfitness[2*MaxNrBands+1];
+  double parentbins_bands[MaxNrBands+1];
+  double parentbins_longbands[MaxNrBands+1];
+  double parentbins_difbands[MaxNrBands+1];
+  double parentbins_nonexpfitness[2*MaxNrBands+1];
+  std::list<int> popancestry;
+  typedef std::list<int>::iterator iter;
+
+
+int pagidc_;
+[[Population.hh:Population();|Population();]]
+[[Population.hh:NPopulation();|~Population();]]
+[[Population.hh:void InitPopulation();|void InitPopulation();]]
+[[Population.hh:void InitPopulationFromGenome(char fname)|void InitPopulationFromGenome(char *fname);]]
+[[Population.hh:void DeathOfAgent(int i,int j);|void DeathOfAgent(int i,int j);]]
+[[Population.hh:void ReproduceAgent(int t,int sourcei,int sourcej,int desti,int destj);|void ReproduceAgent(int t,int sourcei,int sourcej,int desti,int destj);]]
+[[Population.hh:void Margolus();|void Margolus();]]
+[[Population.hh:void Shuffle();|void Shuffle();]]
+[[Population.hh:void Step(int t);|void Step(int t);]]
+[[Population.hh:void WritePopFitnessToFile(int time);|void WritePopFitnessToFile(int time);]]
+[[Population.hh:void WriteGenomeLengthToFile(int time);|void WriteGenomeLengthToFile(int time);]]
+[[Population.hh:void WriteBandsToFile(int time);|void WriteBandsToFile(int time);]]
+[[Population.hh:void WriteFittestMatricesToFile(int time);|void WriteFittestMatricesToFile(int time);]]
+[[Population.hh:void WriteAncestriesToFile(int t);|void WriteAncestriesToFile(int t);]]
+[[Population.hh:void ReadAncestorsFromFile(char fname);|void ReadAncestorsFromFile(char *fname);]]
+[[Population.hh:void WriteFullAncestry(Agent C);|void WriteFullAncestry(Agent *C);]]
+[[Population.hh:void WriteAgentToFile(char dirname,int i, int j);|void WriteAgentToFile(char *dirname,int i, int j);]]

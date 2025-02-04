@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-28T18:25:20+01:00
+
+====== void WriteEmbryology(char dirname) ======
+Created Tuesday 28 January 2014
+
+An instance of the now wellknown png function. 
+
+* store celltypes of all cells in all time steps in celltypes[][] → zoomed in version of types[][]
+* add extra row showing "segment generalized celltype classes", stored in bandtypes[]
+
+* rest is usual png stuff

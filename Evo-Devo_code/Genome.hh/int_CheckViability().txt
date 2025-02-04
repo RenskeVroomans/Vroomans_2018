@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-08-04T13:58:37+02:00
+
+====== int CheckViability() ======
+Created Monday 04 August 2014
+
+Checks whether there is at least one gene of every type present.
+returns true or false

@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T15:01:58+01:00
+
+====== void Shuffle(); ======
+Created Friday 31 January 2014
+
+Randomly shuffles Ags field
+
+* translates 2d field positions to single integer (placing row after row, 1,2,3...). These are pushed on the locations vector. I don't quite understand the why of this part though... you know how many positions the field has, you can simply put them in the vector, no need to go through field...
+
+* Shuffle locations vector → library function
+* translate each integer in locations vec back to 2d position, and copy AG from this position to another in Ag2 (which is stepped through in normal order). 
+* Copy Ags2 back to Ags

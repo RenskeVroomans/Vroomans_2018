@@ -1,0 +1,17 @@
+====== ChromBB.hh ======
+Created Wednesday 02 October 2013
+
+includes no headers!
+
+class ChromBB
+
+ public:
+  int type;
+
+ChromBB();
+virtual ChromBB *clone() const=0;
+virtual ~ChromBB();
+explicit ChromBB(const ChromBB &cbb);
+
+
+generic genome building block: probably an abstract class. The classes Gene and TFBS inherit from this class.

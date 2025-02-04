@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-10-23T12:24:23+02:00
+
+====== void BuildNetwork(Genome G) ======
+Created Thursday 23 October 2014
+
+Function goes through genome twice:
+first to pick out all the genes and put them in Vertex list VL.
+
+second time it creates the list of lists of edges, AL:
+goes through the genome backwards
+
+every time it encounters a gene it pushes a new list at the front of AL: new node for which to store all incoming edges.
+
+If it encounters a TFBS, we look up in VL which vertices match to the type of the tfbs
+the first one gets the mark use=1; the others of the same type get use=0: in the running of the network, we use protein concentrations so don't need to consider the expression of all genes of the same type separately
+However, different TFBS of same type do get into the list twice (-> no conflict with different strengths)

@@ -1,0 +1,4 @@
+====== void UpdateCellState(Network  N) ======
+Created Monday 27 January 2014
+
+Calls the Network function UpdateNetworkState(1, proteinstates,signalstates)

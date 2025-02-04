@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-28T17:44:49+01:00
+
+====== void WriteGenome(char dirname) ======
+Created Tuesday 28 January 2014
+
+To write the genome of this agent to a file. It contains 1 line with pairs of 2 numbers. 
+The first in the pair indicates the element (0=gene, -1=repressing TFBS, 1=activation TFBS), the second indicates the type of the element.
+

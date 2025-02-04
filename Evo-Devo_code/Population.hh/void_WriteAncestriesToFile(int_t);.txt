@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T16:25:59+01:00
+
+====== void WriteAncestriesToFile(int t); ======
+Created Friday 31 January 2014
+
+* clear popancestry (an integer list)
+* copy ancestries of all currently alive and present agents into population ancestry:
+	* go through agents, copy for each the ancestry list and then add current agent
+
+* sort list of popancestry--> oldest first
+* remove duplicate ancestors:  popancestry.erase(unique(popancestry.begin(),popancestry.end()),popancestry.end()); ////why not just use popancestry.unique()?//
+* write to file → collective ancestors of whole population
+
+* write for each individual agents 

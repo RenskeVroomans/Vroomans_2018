@@ -1,0 +1,14 @@
+====== void FormZygote() ======
+Created Friday 17 January 2014
+
+**Initializes array of Cell object the starting number of cells.**
+
+ int startnrcells=InitNrCells;
+  int i,j;
+  //setup of identical cells
+  for(i=0;i<startnrcells;i++)
+    {
+      CL[i]=new Cell();
+      CL[i]->SetCellState();
+      anrcells_++;
+    }

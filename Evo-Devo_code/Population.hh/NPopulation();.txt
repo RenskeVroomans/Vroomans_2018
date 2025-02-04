@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T11:55:45+01:00
+
+====== NPopulation(); ======
+Created Friday 31 January 2014
+
+Destructor → deletes Ags and Ags2

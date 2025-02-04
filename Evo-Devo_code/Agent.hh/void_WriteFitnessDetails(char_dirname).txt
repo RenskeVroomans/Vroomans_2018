@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-29T11:51:59+01:00
+
+====== void WriteFitnessDetails(char dirname) ======
+Created Wednesday 29 January 2014
+
+print to file FitnessDetails:
+
+* nrbands
+* nrlongbands
+* nonexpfitness
+* fitness
+* glpenalty
+* instpenalty
+* shortsegpenalty
+
+
+print for each band: begin point, end point, length, whether long enough, and type.

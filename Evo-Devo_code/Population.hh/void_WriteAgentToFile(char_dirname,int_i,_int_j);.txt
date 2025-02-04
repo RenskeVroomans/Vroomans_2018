@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T18:17:01+01:00
+
+====== void WriteAgentToFile(char dirname,int i, int j); ======
+Created Friday 31 January 2014
+
+
+For this agent, call:
+[[Agent.hh:void WriteEmbryology(char dirname)|WriteEmbryology(dirname)]]
+[[Agent.hh:void WriteGenome(char dirname)|WriteGenome(dirname)]]
+[[Agent.hh:void WriteSignalProfiles(char dirname)|WriteSignalProfiles(dirname)]]
+[[Agent.hh:void WriteFitnessDetails(char dirname)|WriteFitnessDetails(dirname)]]

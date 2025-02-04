@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T16:09:29+01:00
+
+====== void WriteBandsToFile(int time); ======
+Created Friday 31 January 2014
+
+same as [[Population.hh:void WriteGenomeLengthToFile(int time);|WriteGenomeLengthToFile()]] and [[Population.hh:void WritePopFitnessToFile(int time);|WritePopFitnessToFile()]], but then for nrbands and nrlongbands 
+
+fprintf(f,"%i\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n",time,avgnrbands,minnrbands,maxnrbands,stdnrbands,avgnrlongbands,minnrlongbands,maxnrlongbands,stdnrlongbands);

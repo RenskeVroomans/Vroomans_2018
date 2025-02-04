@@ -1,0 +1,19 @@
+====== void CreateAgentFromScratch(int agid int t) ======
+Created Friday 17 January 2014
+
+
+**Builds the agent:**
+ InitAgent(agid,0,t);
+  G->GenerateGenome();
+  N->BuildNetwork(G);
+  //wfspeed=1.+(uniform()*0.3-0.15);//if you want to add developmental noise
+
+**runs the time steps**
+  DevelopAgent();
+
+**calculates fitness**
+  DetermineFitness(t);
+  
+#ifdef RUN
+  ancestry.push_back(-1);//beginning of ancestry, no parent
+#endif

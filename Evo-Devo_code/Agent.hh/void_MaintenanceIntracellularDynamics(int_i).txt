@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== void MaintenanceIntracellularDynamics(int i) ======
+Created Friday 17 January 2014
+
+You can choose: either you store the gene expression of cells at 1 point somewhere before the end of development (first half, !averagepattern)
+or you average the gene expression per cell over a number of time steps (in maintproteinstates) and store the variance (varmaintproteinstates)
+
+Both options allow you to check the stability of the pattern, but the second one is better at preventing oscillations of the pattern.

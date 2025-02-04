@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T11:54:15+01:00
+
+====== Population(); ======
+Created Friday 31 January 2014
+
+initializes Ags[][] and Ags2[][] arrays to null.

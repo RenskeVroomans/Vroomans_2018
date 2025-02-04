@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T15:23:29+01:00
+
+====== void Step(int t); ======
+Created Friday 31 January 2014
+
+* Empty Ags2
+* go through field 
+	* if a spot is empty:
+		* reset the cumfit 2d array (for neighbourhood?) to -1
+		* Go through neighbourhood of empty spot:
+			* add fitness of all agents to totalfit
+			* add totalfit to the right spot in cumfit
+			* count nr of agents
+		* select an agent to reproduce (remember Sandro's method?) → go through cumfit 2d array. temp= uniform*totalfit.
+		* if temp <cumfit[][], that agent will reproduce → break out of loop
+		* call [[Population.hh:void ReproduceAgent(int t,int sourcei,int sourcej,int desti,int destj);|ReproduceAgent(t,memi,memj,i,j)]]
+
+* select agents that will die with a certain probability.
+	* call [[Population.hh:void DeathOfAgent(int i,int j);|DeathOfAgent(i,j)]] for those that die. The others are copied into Ags2
+* Copy Ags2 back into Ags.
+* Do margolus diffusion
+
+**Note that, because you take the vantage point of empty spots, one agent can reproduce multiple times.**

@@ -1,0 +1,4 @@
+====== void IntracellularDynamics() ======
+Created Friday 17 January 2014
+
+Just calls UpdateCellState for every cell with option N ->updates genestates, proteinstates, but not signalstates

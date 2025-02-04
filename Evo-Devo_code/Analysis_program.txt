@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-08-26T16:35:20+02:00
+
+====== Analysis program ======
+Created Tuesday 26 August 2014
+
+The analysis program is an amalgam of the simulation code and new analysis and printing functions. 
+Kirsten's main program is more elaborate, also comparing agents and looking at domains. My version only analyses one agent.
+
+It takes 4 arguments: agentID, the path of the FittestGeneration directory, the path of the directory where the output should go, and a boolean for whether to do the full analysis
+
+**program flow:**
+
+-Create a new agent, identical to the input agent
+- Write its properties to a file:
+	* WriteNetwork(0)
+	* WriteBasicProperties()
+	* GenomeAndNetworkProperties
+	* Attractor properties
+	* Loop and motif properties
+
+- if Full analysis:
+	* create several types of pruned agents, for which the genome, network and signal profiles are written to files.
+	* create a file, GeneTFBSConnectionNumbers, which contains just the gene and tFBS numbers for the pruned agents created.
+	* create a file, SegmentNumbers, which contains the number of long bands of the pruned agents
+

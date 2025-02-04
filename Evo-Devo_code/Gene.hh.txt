@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== Gene.hh ======
+Created Wednesday 02 October 2013
+
+includes ChromBB.hh
+
+creates a Class Gene which inherits from the class ChromBB
+
+public:
+ int gact_;
+  int ginh_;
+
+Gene();//constructor
+virtual ChromBB* clone() const;
+~Gene();//destructor
+Gene(int t,int a, int i);//constructor with arguments
+explicit Gene(const Gene &gene);//copy constructor	
+
+**The code contains the following comments:**
+
+to be able to switch the type of function used for activation and inhibition by TF bound to upstream TFBS:
+  //0=max functie
+  //1=prod functie
+
+activation:
+max functie: (OR)
+1 and 0 -> 1
+0 and 1 -> 1
+1 and 1 -> 1
+0 and 0 -> 1
+so if multiple activators can bind to UR only one needs to be on to switch the gene on
+if only one activator can bind to UR, it being on suffices to switch the gene on
+however if zero activators can bind to UR, make sure that gene is off --> HUH? hier staat ook aan....zal wel foutje zijn
+
+activation:
+prod functie: (AND)
+ 1 and 0 -> 0
+ 0 and 1 -> 0
+ 1 and 1 -> 1
+ 0 and 0 -> 0
+so if multiple activatorscan bind to UR, they all need to be on to swith the gene on
+if only one activatorcan bind to UR, it being on suffices to swith the gene on
+however if zero activators can bind to UR, make sure that gene is off
+
+inhibition:
+max functie: (AND)  **no, I think the max function is also OR here, the prod function is AND**
+ 1 and 0 -> 0 and 1 -> 1
+ 0 and 1 -> 1 and 0 -> 1
+ 1 and 1 -> 0 and 0 -> 0
+ 0 and 0 -> 1 and 1 -> 1
+so if multiple repressors can bind to UR, they all need to be on to switch the gene off
+if only single repressor can bind to UR, it being on suffices to switch the gene off
+however if zero repressors can bind to UR, make sure that gene can be on
+
+inhibition:
+prod functie: (OR)
+ 1 and 0 -> 0 and 1 -> 0
+ 0 and 1 -> 1 and 0 -> 0
+ 1 and 1 -> 0 and 0 -> 0
+ 0 and 0 -> 1 and 1 -> 1
+so if multiple repressors can bind to UR, only one needs to be on to switch gene off
+if only single repressor can bind to UR, it being on suffices to switch gene off
+however if zero repressors can bind to UR, make sure that gene can be on
+
+
+so both for activation and repression holds: as long as there is only one activating or repressing binding site the max and prod function are equivalent
+
+for activation holds (independent of max or prod function) if there are no activator binding sites in UR gene should be off
+
+for inhibition holds (independent of max or prod function) if there are no repressor binding sites in UR gene should still have **possibility** of being switched on

@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T15:59:09+01:00
+
+====== void WriteGenomeLengthToFile(int time); ======
+Created Friday 31 January 2014
+
+Go through agents,  collect genome length, nr of genes and nr of tfbs for averages, std devs,  and min and max at that time step. 
+
+fprintf(f,"%i\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n",time,avggn,mingn,maxgn,stdgn,avgtfbs,mintfbs,maxtfbs,stdtfbs,avglen,minlen,maxlen,stdlen);

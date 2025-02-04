@@ -1,0 +1,14 @@
+====== void CloneAgentFromAgent(Agent  A int agid int t) ======
+Created Friday 17 January 2014
+
+**same as previous two, but now an agent is cloned and run again? Why? are there any mutations occuring  in the "cloneGenome" function? **
+
+InitAgent(agid,A->agentid,t);
+  G->CloneGenome(A->G);
+  N->BuildNetwork(G);
+  //wfspeed=1.+(uniform()*0.3-0.15);//if you want to add developmental noise
+  DevelopAgent();
+  DetermineFitness(t);
+#ifdef RUN
+  ancestry.push_back(-1);//beginning of ancestry, no parent
+#endif

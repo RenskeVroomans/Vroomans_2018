@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-08-04T11:56:26+02:00
+
+====== Kirsten's model setup ======
+Created Monday 04 August 2014
+
+**organism:**
+- 100 cells
+- genome with TFs and TFBS
+
+**genome:**
+- 16 gene types
+- can have multiple genes of the same type
+- gene 0: maternal morphogen, imposed wavefront
+- 5: segmental gene
+- 8-15: domain genes
+
+**regulation:**
+- genes impact each other with strength +1 or -1
+
+**fitness:**
+- segments and domain number
+- min length of segment/domain: 7 cells
+- compare expression at end with 20 steps before: is pattern stable? otherwise fitness penalty
+- small fitness penalty for each gene and TFBS to prevent excessive growth
+
+**evolution:**
+- start with 50 individuals on 30x30 grid
+- mutations: duplications/deletions, changes in type and weight of TFBS
+- tournament selection for reproduction
+- death prob is constant, 0.5
+
+**analysis:**
+- 50 simulations
+- networks that evolved segmentation and domains: size and architecture
+- developmental dynamics
+- robustness of evolved networks: 50 new sims with added noise/higher mutation rate
+- evolvability: evolve with specific target, then continue run with different target
+- modularity: modularity score: Q value. Also pruned network for this

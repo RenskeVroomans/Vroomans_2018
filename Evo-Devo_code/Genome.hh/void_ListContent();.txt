@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-08-05T12:31:51+02:00
+
+====== void ListContent(); ======
+Created Tuesday 05 August 2014
+
+prints the size of the list: number of genome elements
+
+then prints for every element the type (gene g, pos. TFBS +, neg. TFBS -), and the type (#)

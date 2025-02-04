@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== TFBS.hh ======
+Created Wednesday 02 October 2013
+
+ChromBB.hh
+
+class TFBS : public ChromBB			//TBFS inherits from ChromBB
+
+'''
+ public:
+  int weight;//+1 or -1
+  double HH;
+'''
+
+TFBS();//constructor
+virtual ChromBB* clone() const;
+virtual ~TFBS();//destructor
+TFBS(int t,int w,double H);//constructor with args
+explicit TFBS(const TFBS &tfbs);//copy constructor
+
+
+

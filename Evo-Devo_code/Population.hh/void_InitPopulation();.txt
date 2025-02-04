@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T11:56:55+01:00
+
+====== void InitPopulation(); ======
+Created Friday 31 January 2014
+
+An initial population of InitNrAg is placed in a (randomly picked) block of 10*10 in the center of the Ags field. 
+
+Note that for the first agent that is placed, immediately its development is calculated (within [[Agent.hh:void CreateAgentFromScratch(int agid int t)|CreateAgentFromScratch(pagidc_,0)]]) 
+	* if the agent has 1 or more sufficiently long bands, the Agent is placed in the field. (probably for reproduction into next gen )
+		* if it's a rerun, the function WriteFullAncestry(Agent *c) is called.
+	* else the Agent is deleted (embryonic lethal) and the loop for placing the first agent is repeated
+* if it's not the first Agent, the new Agent is cloned from the first, calling [[Agent.hh:void CloneAgentFromAgent(Agent  A int agid int t)|CloneAgentFromAgent(A,pagidc_,0),]] and immediately placed in the field: we receive an initial population of identical agents

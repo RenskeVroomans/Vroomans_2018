@@ -1,0 +1,27 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== Edge.hh ======
+Created Wednesday 02 October 2013
+
+#ifndef EdgeHeader
+#define EdgeHeader
+
+include:
+Vertex.hh
+
+class Edge
+
+'''
+ public:
+  Vertex *V;
+  int weight;
+  double HH;
+  int use;
+'''
+
+Edge(); //constructor: sets everything to 0
+~Edge();
+Edge(Vertex *ve,int w,double HH,int u); //alternative constructor: sets vertex from which it comes, weight and use (see [[Evo-Devo code:Network.hh:void BuildNetwork(Genome G)|void BuildNetwork(Genome G)]])
+Edge(const Edge &e); //copy constructor: makes a copy of the edge given as input
+

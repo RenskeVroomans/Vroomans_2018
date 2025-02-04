@@ -1,0 +1,11 @@
+====== Misc.hh ======
+Created Wednesday 02 October 2013
+
+includes:
+Header.hh
+
+declares:
+void fillgauss();
+
+fills a colormap:
+static int colormap[255][3] //lots of values

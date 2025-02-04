@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-08-04T12:36:06+02:00
+
+====== Code layout ======
+Created Monday 04 August 2014
+
+World:
+
+Start() makes the right directories
+
+you define RUN:
+
+- Make a new Population
+- call [[Evo-Devo Code:Population.hh:void InitPopulation();|InitPopulation()]]
+- initialize some random numbers
+- write some initial data to file
+
+then for NrGenerations, do:
+- call [[Evo-Devo Code:Population.hh:void Step(int t);|Step]] for the Population;
+	- in Step, when reproduction happens, [[Evo-Devo Code:Population.hh:void ReproduceAgent(int t,int sourcei,int sourcej,int desti,int destj);|ReproduceAgent()]] is called. 
+		- The offspring is created, the genome mutated and the organism immediately developed (+ fitness calculation): see [[Evo-Devo Code:Agent.hh:void CreateAgentFromParent(Agent  A int agid int t)|CreateAgentFromParent(Agent  A int agid int t)]]
+			- modified functions to check:  DevelopAgent();   DetermineFitness(t);
+- write data to files
+

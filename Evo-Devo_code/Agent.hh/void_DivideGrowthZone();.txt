@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-03-10T16:11:08+01:00
+
+====== void DivideGrowthZone(); ======
+Created Tuesday 10 March 2015
+
+The posterior-most cell (actually the first in the list) divides and pushes an exact copy behind it.:
+
+cell0 - cell1-cell2-cell3
+becomes
+cell0-cell4-cell1-cell2-cell3

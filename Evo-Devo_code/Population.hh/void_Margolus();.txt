@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T14:53:08+01:00
+
+====== void Margolus(); ======
+Created Friday 31 January 2014
+
+margolus diffusion on the field. Ags2 as temporary container

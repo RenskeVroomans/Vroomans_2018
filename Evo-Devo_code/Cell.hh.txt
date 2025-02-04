@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+
+====== Cell.hh ======
+Created Wednesday 02 October 2013
+
+Includes:
+* header.hh
+* Genome.hh
+* Network.hh
+* Misc.hh
+* stdlib.h
+
+contains the class Cell with the following public variables and functions:
+	int nrg;
+	int age;   //unused, but is good for debugging division
+	int id; 
+  	int divisioncounter; //also unused; most likely obsolete
+  	double proteinstates[NrGeneTypes];//genes of same type together determine 1 protein level
+  	double avgproteinstates[NrGeneTypes];
+  	double maintproteinstates[NrGeneTypes];
+  	double signalstates[NrSignGeneTypes];
+
+'''
+Cell();
+~Cell();
+void SetCellState();  //set initial conditions
+void UpdateCellState(Network *N);
+void UpdateCellAge();	
+'''
+

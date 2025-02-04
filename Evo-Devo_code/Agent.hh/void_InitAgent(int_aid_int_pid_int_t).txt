@@ -1,0 +1,27 @@
+====== void InitAgent(int aid int pid int t) ======
+Created Friday 17 January 2014
+
+
+**sets variables and arrays for the agent at starting values, allocates memory for genome and network**
+
+
+  anrcells_=0;
+  agentid=aid; //agent and parent id is to trace ancestry
+  parentid=pid;
+  tbirth=t;
+  fitness=0;
+
+  G=NULL;
+  G=new Genome();
+  N=NULL;
+  N=new Network();
+
+  for(i=0;i<NrFinalCells;i++)
+    CL[i]=NULL;
+  for(i=0;i<NrStorages;i++)//to store gene expression pattern
+    for(j=0;j<NrFinalCells;j++)//to determine segmentation pattern
+      for(k=0;k<NrGeneTypes;k++)//and its stability in last period
+	E[i][j][k]=0;
+  for(i=0;i<NrStorages;i++)//to store celltypes (derived from gene expression pattern)
+    for(j=0;j<NrFinalCells;j++)
+      types[i][j]=0;

@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-31T14:29:58+01:00
+
+====== void InitPopulationFromGenome(char fname) ======
+Created Friday 31 January 2014
+
+Similar to [[Population.hh:void InitPopulation();|InitPopulation()]], but first agent is created with function [[Agent.hh:void CreateAgentFromGenome(int agid int t char  fname)|CreateAgentFromGenome(1,1,fname),]] and there is no information printed about its fitness.

@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-01-28T17:48:09+01:00
+
+====== int CellTypeToColor(int type) ======
+Created Tuesday 28 January 2014
+
+simple function which converts an integer to to a value 
+
+if(type==0)
+    color=254;
+  else
+    color=(type*40)%251; //251 is prime
+  return color;
+
